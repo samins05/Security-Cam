@@ -65,7 +65,9 @@ def add_person():
         cv2.destroyAllWindows()
         train_class("data") # train the classifier after putting images in the data folder
 
-
+#make data directory if it doesnt already exist
+if not os.path.isdir("./data"):
+    os.mkdir("./data")
 
 interface = tk.Tk()
 #field for entering person's name to be added to database
